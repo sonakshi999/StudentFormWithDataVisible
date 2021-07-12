@@ -1,0 +1,293 @@
+.headAllign
+{
+    height:40px;
+    background-color:rgb(70,215,172);
+    text-align: center;
+}
+.block{
+    display:block;
+}
+
+a {
+    color:whitesmoke;
+    text-decoration : none;
+}
+
+.front{
+    background-color: rgb(70,215,172);
+}
+
+.front-text
+{
+    color:whitesmoke;
+}
+
+@media screen and (min-width:991px )
+{
+  .one-side-border
+  {
+      border-right:solid 2px rgb(70,215,172);
+  }
+}
+
+@media screen and (max-width:991px)
+{
+  .one-side-border
+  {
+      border-bottom:solid 2px rgb(70,215,172);
+
+  }
+}
+
+.check-radio
+{
+    margin-left: 10px;;
+}
+
+span{
+    
+    color:red;
+    font-size: small;
+}
+
+table.table-bordered > thead > tr > th{
+    border:1px solid rgb(70,215,172);
+    padding: 3px;
+    font-size: 90%;
+    width: 75%;
+}
+table.table-bordered >tbody{
+    overflow-y: auto;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid green;
+    font-size: 13px;
+    padding: 5px;
+    
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td {
+   background-color: rgb(255,255,255);
+ }
+
+.table-striped>tbody>tr:nth-child(even)>td{
+   background-color: #daffaa;
+ }
+
+table.table-bordered
+{
+    border:solid;
+    width:100%;
+    border-color: rgb(70,215,172);
+}
+
+table.table-bordered>thead>tr>td
+{
+    background-color: rgb(70,215,172);
+    padding-left:10px;
+    height:40px;
+}
+
+.divtext
+{
+    margin-top: -120px;
+    margin-bottom: 10px;
+}
+
+.table-wrap {
+    height: 279px;
+    width:400px;
+    margin-top: 30px;
+    margin-left: auto;
+    overflow-y: auto;
+}
+
+@media screen and (min-width: 1001px) {
+    .table-wrap {
+        height: 279px;
+        width:100%;
+        align-items: center;
+        margin-top: 30px;
+        margin-left:20px;
+        overflow-y: auto;
+        
+    }
+}
+  footer
+  {
+      margin-top: 3px;
+  }
+  .footer
+  {
+      background-color:rgb(70,215,172) ;
+      height:24px;
+      font-size: small;
+      color:whitesmoke;
+      bottom:0;
+      position: fixed;
+  }
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+    .table-wrap {
+        height: 279px;
+        width:100%;
+        align-items: center;
+        margin-top: 30px;
+        overflow-y: auto;
+    }
+  }
+  @media screen and (max-width: 750px) and (min-width: 500px) {
+    .table-wrap {
+        height: 279px;
+        width:400px;
+        margin-top: 30px;
+        width:100%;
+        overflow-y: auto;
+    }
+  }
+  
+  @media screen and (max-width: 800px) and (min-width: 750px) {
+    .table-wrap {
+        height: 279px;
+        width:400px;
+        margin-top: 30px;
+        margin-left: 70px;
+        width:100%;
+        overflow-y:auto;
+    }
+  }
+
+  @media screen and (max-width :400px) and (min-width:100px) {
+    .headAllign
+    {
+        text-align: center;
+        width:200%
+    }
+    .table-wrap {
+        height: 279px;
+        width:100%;
+        align-items: center;
+        margin-top: 30px;
+        margin-left:-10px;
+        overflow-y: auto;
+        
+    }
+  }
+
+.textAllign
+{
+    padding-top: 10px;
+    font-size: large;
+    color:whitesmoke;
+    text-align: center;
+}
+
+.seconddiv
+{
+    margin-left: 0px;;
+}
+
+.tablewidth
+{
+    width: 75%;
+}
+
+.firstbutton
+{
+    margin-right: 50px;
+}
+
+.secondbutton
+{
+    margin-left :30px;
+}
+
+#row{
+    margin-top: 25px;
+    font-size: 21px;
+    -webkit-animation: fadein 5s; 
+       -moz-animation: fadein 5s; 
+        -ms-animation: fadein 5s; 
+         -o-animation: fadein 5s; 
+            animation: fadein 5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.form-control-block {
+    margin-top: 8px;
+    display: block;
+    width: 80%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.0;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #413c3c;
+    border-radius: 0.4rem;
+  }
+  p
+  {
+      display: inline;
+  }
+  .checkinput
+  {
+      background-color: blue;
+  }
+  label:hover
+  {
+      font-weight: bold;
+  }
+  
+  #Student-list:hover {
+    text-shadow: 2px 2px 4px #000000;
+  }
+  #image
+  {
+      background-image: url("https://icon-library.com/images/male-icon-png/male-icon-png-19.jpg");
+      height:100px;
+      width:100px;
+      margin-left:10px;
+      background-size:contain;
+      display:-ms-grid;
+
+  }
+@media screen and (min-height:561px)
+{
+    footer
+    {
+        margin-top: 4px;
+        bottom:0;
+        position: fixed;
+        width:102%;
+    }
+}
+ 
+  

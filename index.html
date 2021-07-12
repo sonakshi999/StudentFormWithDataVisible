@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="studentForm.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+    <body onload="getLocalValues()">
+    
+        <article>
+             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 front">
+                        <h3 class="text-center front-text" id="front-text">Student Enrollment Form</h3>
+                    </div>
+                </div>
+
+            <div class="row ml-3 mt-3">
+                <div class="col-sm-12 col-lg-6 col-md-12 one-side-border" >
+                    <section>
+                    <form onsubmit="event.preventDefault();onFormSubmit();"id="studentForm">
+                        <div class="form-group row">
+                            <label for="Name" class="col-lg-3 col-sm-3 col-xs-3 col-md-3 col-form-label">Name</label>
+                            <div class="col">
+                                <input type="text" class="col-sm-12 col-lg-6 col-md-12 form-control-block" id="name" autocomplete="off">
+                                <span id="usererror" class="text-center"></span>
+                            </div>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="Email" class="col-lg-3 col-sm-3 col-xs-3 col-md-3 col-form-label">Email</label>
+                            <div class="col">
+                                <input type="email" class="col-sm-12 col-lg-6 col-md-12 form-control-block" id="email" autocomplete="off">
+                                <span id="emailerror" class="text-center"></span>
+                            </div>
+                   
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="Website" class="col-lg-3 col-sm-3 col-xs-3 col-md-3 col-form-label">Website</label>
+                            <div class="col">
+                                <input type="text" class="col-sm-12 col-lg-6 col-md-12 form-control-block" id="website" autocomplete="off">
+                                <span id="websiteerror" class="text-center"></span>
+                            </div>
+                    
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="imageLink" class="col-lg-3 col-sm-3 col-xs-3 col-md-3 col-form-label">Image link</label>
+                            <div class="col">
+                                <input type="text" class="col-sm-12 col-lg-6 col-md-12 form-control-block" id="url" autocomplete="off">
+                                <span id="urlerror" class="text-center"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+					        <label for="Gender" class="col-lg-3 col-sm-3 col-xs-3 col-md-3 col-form-label">Gender</label>
+					        <div class="form-group">
+						        <div class="form-check" style="margin-left:10px;">
+  							    <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+  							    <label class="form-check-label" for="male">
+    							    Male
+		  					    </label>
+						        </div>
+						        <div class="form-check" style="margin-left:10px;">
+  							        <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+  							        <label class="form-check-label" for="female">
+	    						        Female
+  							        </label>
+						        </div>
+                                <span id="gender" class="block" ></span>
+					        </div>
+				        </div>
+
+                        <div class="form-group row">
+					        <label for="Skills" class="col-lg-3 col-sm-3 col-xs-3 col-md-3 col-form-label">Skills</label>
+					        <div class="form-group">
+						        <div class="  form-check form-check-inline">
+							    <input class="form-check-input" type="checkbox" value="JAVA" name="skills" id="java">
+				  			    <label class="form-check-label" for="java">
+					    		    Java
+					  		    </label>
+						    </div>
+						<div class="form-check form-check-inline">
+					  		<input class="form-check-input" type="checkbox" value="HTML" name="skills" id="html">
+				  			<label class="form-check-label" for="html">
+					    		HTML
+						  	</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" value="CSS" name="skills" id="CSS">
+					  		<label class="form-check-label" for="CSS">
+						    	CSS
+					  		</label>
+						</div>	
+                        <span id="skills" class="block" ></span>		
+					    </div>
+                   
+				    </div>
+
+                    <div class="form-group row">
+                        <input class="btn btn-primary bt-sm ml-3" type="submit" aria-pressed="true" id="submit" value="Enroll Student" style="margin-right: 5px;">
+                        <input type="button" class="btn btn-danger bt-sm secondbutton" onclick="resetForm();" id="clear" value="Clear" aria-pressed="true">
+                    </div>
+
+                </form>
+                </section>
+            
+            </div>
+                    <div class="col-md-12 col-lg-5 col-sm-12">
+                        <div>
+                        <h3 class="text-center" id="Student-list">Enrolled Students</h1>
+                        </div>
+                        <div class="table-wrap">
+                            <table class="table table-bordered table-striped" id="studentList">
+                                <thead style="background-color: rgb(167,201,65);">
+                                    <tr>                                      
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="height: 80px; overflow-y:scroll;">
+                      
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+             </div>
+        </div>
+                <footer class="row text-center">
+                    <div class="col footer mt-5">
+                    <h6>Copyright 2020-2021 by Fresher's Training</h6>
+                    </div>
+                </footer>
+        </article>
+
+        <script rel="javascript"src="studentForm.js"></script>
+    </body>
+</html>
